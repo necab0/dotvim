@@ -27,6 +27,7 @@ declare -a PLUGINS=(
     "https://github.com/prabirshrestha/asyncomplete.vim"        # used for rust plugin
     "https://github.com/prabirshrestha/asyncomplete-lsp.vim"    # used for rust plugin
     "https://github.com/rust-lang/rust.vim.git"                 # lots of neat rust features
+    "https://github.com/Valloric/YouCompleteMe"                 # autocompletion
 
     "https://github.com/NLKNguyen/papercolor-theme"             # color scheme
 )
@@ -65,3 +66,8 @@ then
     done
 fi
 
+# YouCompleteMe installation (configure for other languages)
+cd $DOTVIM/bundle/YouCompleteMe
+git submodule update --init --recursive
+# for arch using clang package
+./install.sh --clang-completer --system-libclang --rust-completer
