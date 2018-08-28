@@ -38,7 +38,6 @@ let g:ctrlp_extensions = ['tag']
 noremap <F2> :NERDTreeToggle<CR>
 set pastetoggle=<F3>
 
-
 " fzf bindings
 noremap <F4> :FZF<CR>
 inoremap <F4> <esc>:w<CR>:FZF<CR>
@@ -46,20 +45,9 @@ inoremap <F4> <esc>:w<CR>:FZF<CR>
 " launch current file
 nnoremap <F5> :!%:p<CR>
 
-" ctrl+s make sure: stty -ioxn
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <C-O>:update<CR>
-
-" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-" (via http://stackoverflow.com/a/22253548/1626737)
-let g:SuperTabDefaultCompletionType    = '<C-n>'
-let g:SuperTabCrMapping                = 0
-let g:UltiSnipsExpandTrigger           = '<tab>'
-let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 " rustfmt on save
 let g:rustfmt_autosave = 1
 

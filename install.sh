@@ -14,7 +14,6 @@ declare -a PLUGINS=(
     "https://github.com/tpope/vim-fugitive"                     # git
     "https://github.com/vim-syntastic/syntastic"                # syntax checks
     "https://github.com/scrooloose/nerdtree"                    # find files
-    "https://github.com/ervandew/supertab"                      # autocomplete tab
     "https://github.com/tpope/vim-surround"                     # wrap blocks
     "https://github.com/SirVer/ultisnips"                       # snippet base
     "https://github.com/honza/vim-snippets"                     # snippets
@@ -69,5 +68,4 @@ fi
 # YouCompleteMe installation (configure for other languages)
 cd $DOTVIM/bundle/YouCompleteMe
 git submodule update --init --recursive
-# for arch using clang package
-./install.sh --clang-completer --system-libclang --rust-completer
+./install.sh --rust-completer
