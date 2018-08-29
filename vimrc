@@ -22,19 +22,12 @@ set mouse=a
 set mousemodel=extend
 set clipboard=unnamedplus
 
-set background=dark
-colorscheme PaperColor
 :highlight Directory guifg=#FF0000 ctermfg=red
 :highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 :match ExtraWhitespace /\s\+$/
 
-let g:airline_theme='dark'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-
-let g:ctrlp_extensions = ['tag']
-
+" toggle nerd tree
 noremap <F2> :NERDTreeToggle<CR>
 set pastetoggle=<F3>
 
@@ -44,12 +37,6 @@ inoremap <F4> <esc>:w<CR>:FZF<CR>
 
 " launch current file
 nnoremap <F5> :!%:p<CR>
-
-let g:UltiSnipsExpandTrigger="<C-j>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
-" rustfmt on save
-let g:rustfmt_autosave = 1
 
 let mapleader = ","
 
@@ -61,23 +48,30 @@ noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>w :bd<CR>
 
-nnoremap <leader>g :set operatorfunc=GrepOperator<cr>g@
-vnoremap <leader>g :<c-u>call GrepOperator(visualmode())<cr>
-
 " clear search highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
-function! GrepOperator(type)
-    if a:type ==# 'v'
-        normal! `<v`>y
-    elseif a:type ==# 'char'
-        normal! `[v`]y
-    else
-        return
-    endif
+" https://github.com/kien/ctrlp.vim configuration
+let g:ctrlp_extensions = ['tag']
 
-    silent execute "grep! -R " . shellescape(@@) . " ."
-    copen
-    " redraw!
-endfunction
+" https://github.com/vim-airline/vim-airline configuration
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+" https://github.com/vim-airline/vim-airline-themes configuration
+let g:airline_theme='dark'
+set background=dark
+colorscheme PaperColor
+
+" https://github.com/SirVer/ultisnips configuration
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
+" https://github.com/Valloric/YouCompleteMe configuration
+let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" https://github.com/rust-lang/rust.vim.git configuration
+let g:rustfmt_autosave = 1
 
