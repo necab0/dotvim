@@ -14,6 +14,7 @@ declare -a PLUGINS=(
     "https://github.com/tpope/vim-fugitive"                     # git
     "https://github.com/vim-syntastic/syntastic"                # syntax checks
     "https://github.com/scrooloose/nerdtree"                    # find files
+    "https://github.com/Xuyuanp/nerdtree-git-plugin"            # add git status for filetree
     "https://github.com/tpope/vim-surround"                     # wrap blocks
     "https://github.com/SirVer/ultisnips"                       # snippet base
     "https://github.com/honza/vim-snippets"                     # snippets

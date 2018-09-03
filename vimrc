@@ -78,3 +78,6 @@ nnoremap <leader>jd :YcmCompleter GoTo<CR>
 " https://github.com/rust-lang/rust.vim.git configuration
 let g:rustfmt_autosave = 1
 
+" https://github.com/Xuyuanp/nerdtree-git-plugin configuration
+let g:NERDTreeShowIgnoredStatus = 1
+
