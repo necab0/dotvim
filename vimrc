@@ -1,6 +1,8 @@
 execute pathogen#infect()
 filetype plugin indent on
 
+set title
+
 set modeline
 set modelines=5
 
@@ -70,6 +72,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " https://github.com/Valloric/YouCompleteMe configuration
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " https://github.com/rust-lang/rust.vim.git configuration
