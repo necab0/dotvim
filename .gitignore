@@ -4,5 +4,8 @@ autoload/*
 !bundle/.gitkeep
 bundle/*
 !bundle/.gitkeep
+!swp/.gitkeep
+swp/*
+!swp/.gitkeep
 view/
 .netrwhist

@@ -13,6 +13,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" swap files
+set directory^=$HOME/.vim/swp//
+
 " search
 set ignorecase
 set smartcase
