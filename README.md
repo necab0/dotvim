@@ -52,3 +52,5 @@ When you have generated a ctags file you can use <Ctrl-]> when on a word to jump
 
 Note that ctags needs proper configuration for different languages.
 
+### Issues
+https://github.com/vim-syntastic/syntastic/issues/1391#issuecomment-97310854
