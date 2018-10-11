@@ -53,6 +53,17 @@ noremap <leader>w :bd<CR>
 " clear search highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
+" pandoc , markdown
+command! -nargs=* RunSilent
+      \ | execute ':silent !'.'<args>'
+      \ | execute ':redraw!'
+nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
+nmap <Leader>pp :RunSilent xdg-open /tmp/vim-pandoc-out.pdf &<CR>
+
+" trim trailing whitespace
+autocmd BufWritePre *.py :%s/\s+$//e
+"
+
 " https://github.com/kien/ctrlp.vim configuration
 let g:ctrlp_extensions = ['tag']
 
