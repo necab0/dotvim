@@ -5,6 +5,7 @@ set title
 
 set modeline
 set modelines=5
+set cursorline
 
 set encoding=utf-8
 set relativenumber
