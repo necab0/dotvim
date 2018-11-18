@@ -30,6 +30,8 @@ declare -a PLUGINS=(
     "https://github.com/Valloric/YouCompleteMe"                 # autocompletion
 
     "https://github.com/NLKNguyen/papercolor-theme"             # color scheme
+
+    "https://github.com/necab0/vimsence"                        # discord rich presence
 )
 
 GIT_CLONE="git clone --depth 1"
