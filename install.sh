@@ -28,6 +28,8 @@ declare -a PLUGINS=(
     "https://github.com/prabirshrestha/asyncomplete-lsp.vim"    # used for rust plugin
     "https://github.com/rust-lang/rust.vim.git"                 # lots of neat rust features
     "https://github.com/Valloric/YouCompleteMe"                 # autocompletion
+    "https://github.com/ludovicchabant/vim-gutentags"           # tag file management
+    "https://github.com/majutsushi/tagbar"                      # tagbar
 
     "https://github.com/NLKNguyen/papercolor-theme"             # color scheme
 

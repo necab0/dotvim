@@ -44,6 +44,9 @@ inoremap <F4> <esc>:w<CR>:FZF<CR>
 " launch current file
 nnoremap <F5> :!%:p<CR>
 
+" tagbar toggle
+nmap <F8> :TagbarToggle<CR>
+
 let mapleader = ","
 
 noremap <leader>ev :vsp $MYVIMRC<CR>
@@ -68,6 +71,12 @@ nmap <Leader>pp :RunSilent xdg-open /tmp/vim-pandoc-out.pdf &<CR>
 autocmd BufWritePre *.py :%s/\s+$//e
 "
 
+" https://github.com/ludovicchabant/vim-gutentags
+let g:gutentags_ctags_extra_args = ['--fields=+l'] " required by YouCompleteMe
+
+" https://github.com/majutsushi/tagbar configuration
+let g:tagbar_autofocus = 1
+
 " https://github.com/kien/ctrlp.vim configuration
 let g:ctrlp_extensions = ['tag']
 
@@ -87,6 +96,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " https://github.com/Valloric/YouCompleteMe configuration
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
