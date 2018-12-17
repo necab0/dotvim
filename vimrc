@@ -94,6 +94,9 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
+" https://github.com/vim-syntastic/syntastic configuration
+let g:syntastic_rust_checkers = ['clippy']
+
 " https://github.com/Valloric/YouCompleteMe configuration
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_collect_identifiers_from_tags_files = 1

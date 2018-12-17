@@ -13,6 +13,7 @@ declare -a PLUGINS=(
     "https://github.com/vim-airline/vim-airline-themes"         # airline themes
     "https://github.com/tpope/vim-fugitive"                     # git
     "https://github.com/vim-syntastic/syntastic"                # syntax checks
+    "https://github.com/wagnerf42/vim-clippy"                   # rust clippy
     "https://github.com/scrooloose/nerdtree"                    # find files
     "https://github.com/Xuyuanp/nerdtree-git-plugin"            # add git status for filetree
     "https://github.com/tpope/vim-surround"                     # wrap blocks
