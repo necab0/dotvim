@@ -6,7 +6,7 @@ Customized version of: https://github.com/dahrens/dotvim.git
 ```bash
 cd ~
 mv .vim .vim.bak  # make a backup of your .vim folder if present
-git clone https://github.com/necab0/dotvim.git .vim
+git clone https://github.com/necabo/dotvim.git .vim
 cd .vim && ./install.sh
 # edit install.sh and vimrc to customize
 ```
